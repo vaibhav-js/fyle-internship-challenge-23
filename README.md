@@ -1,43 +1,46 @@
 # Fyle Frontend Challenge
 
-## Who is this for?
+This project helps retrieve public repositories for any GitHub user using the GitHub API.
 
-This challenge is meant for candidates who wish to intern at Fyle and work with our engineering team. The candidate should be able to commit to at least 6 months of dedicated time for internship.
+## What is an Access Token?
 
-## Why work at Fyle?
+An access token contains information about the user, permissions, groups, and timeframes. They are used in token-based authentication to allow an application to access an API.
 
-Fyle is a fast-growing Expense Management SaaS product. We are ~40 strong engineering team at the moment. 
+## Challenge Outline
 
-We are an extremely transparent organization. Check out our [careers page](https://careers.fylehq.com) that will give you a glimpse of what it is like to work at Fyle. Also, check out our Glassdoor reviews [here](https://www.glassdoor.co.in/Reviews/Fyle-Reviews-E1723235.htm). You can read stories from our teammates [here](https://stories.fylehq.com).
+This challenge involves implementing an application using the GitHub API. The services you are using are free, and you can create a GitHub access token to authenticate the API and make several requests.
 
-## Challenge outline
+__Note__: Unauthenticated users can only make a few requests, and it's possible that the site will give no response. In that case, you can either wait for an hour or create a GitHub access token. Instructions for creating a GitHub access token are provided below.
 
-This challenge involves implementing application using github api. 
+## Deployed Site
 
-The services that you need to use are already implemented - check out ApiService.
+You can access the deployed site [here](http://myfirstbucketasvrs.s3-website.ap-south-1.amazonaws.com/).
 
-You can see details of this challenge [here](https://fyleuniverse.notion.site/fyleuniverse/Fyle-Frontend-development-challenge-cb5085e5e0864e769e7b98c694400aaa)
+## How to Create a GitHub Access Token
 
-__Note__ - This challenge is in angular. We work on angular frameworks & after you join we expect the same from you. Hence it is required to complete this assignement in angular itself.
+1. Login to your GitHub account.
+2. Navigate to your profile pic/avatar and click on Settings.
+3. Scroll down until you see Developer Settings on the left panel and click it.
+4. In the Developer Settings, navigate to the Personal access tokens → Tokens (classic) → Generate New Token.
+5. Now navigate to the Personal access tokens → Tokens (classic) → Generate New Token Dropdown → Generate New Token Classic.
+6. Type a note explaining why you need this token, set an expiration date (recommended: 7 days), select public_repo under repo, and then click on Generate token.
+7. A token will be generated at your end. You can copy this token and save it because you can only see it once. When the page refreshes, the token will be hidden.
 
-## What happens next?
-
-You will hear back within 48 hours from us via email.
+__Note__: If you lose your token, you can delete your existing one and create a new.
 
 ## Installation
 
-1. Fork this repository to your github account.
-2. Clone the forked repository and proceed with steps mentioned below.
+1. Fork this repository to your GitHub account.
+2. Clone the forked repository and proceed with the following steps.
 
-### Install requirements
-* Install angular cli [Ref](https://angular.io/cli)
-* `npm install` in this repository 
+### Install Requirements
+* Install Angular CLI. [Reference](https://angular.io/cli)
+* Run `npm install` in this repository.
 
-## Development server
+## Development Server
 
-Run `ng serve` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a development server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
 
-## Further help
+## Further Help
 
-Visit the [Angular Documentation](https://angular.io/guide/styleguide) to learn more.
-Styling is to be strictly done with [Tailwind](https://tailwindcss.com/docs/installation).
+Visit the [Angular Documentation](https://angular.io/guide/styleguide) to learn more. Styling should be strictly done with [Tailwind CSS](https://tailwindcss.com/docs/installation).
