@@ -1,0 +1,30 @@
+<div class="mt-4 flex" [ngClass]="{'skeleton-loader': isLoadingProfile}">
+
+    <div class="mx-4 bg-white p-20 rounded-lg shadow-lg" *ngIf="isLoadingProfile" [ngClass]="{'skeleton-loader': isLoadingProfile}">
+        <h1 class="text-2xl font-semibold"></h1>
+        <h4 class="text-base text-gray-600"></h4>
+        <address class="text-base text-gray-600"></address>
+        <h5 class="text-base text-blue-500 mt-2">
+            <a class="hover:underline" href="" target="_blank"></a>
+        </h5>
+        <a class="text-blue-400 hover:underline mb-6" href=""></a>
+    </div>
+
+
+    <div class="mx-4" *ngIf="!isLoadingProfile">
+        <ngx-avatars githubId={{avatarUsername}} size="150"></ngx-avatars>
+    </div>
+    
+    <div class="mx-4" *ngIf="!isLoadingProfile">
+        <h1 class="text-2xl font-semibold">{{name ? name : "No name provided"}}</h1>
+        <h4 class="text-base text-gray-600">{{bio ? bio : "No bio Provided"}}</h4>
+        <address class="text-base text-gray-600">{{location ? location : "No location provided"}}</address>
+        <h5 class="text-base text-blue-500 mt-2">
+            <ng-container *ngIf="twitter_username; else noTwitter">
+                <a class="hover:underline" href="https://twitter.com/{{twitter_username}}" target="_blank">Twitter: https://twitter.com/{{twitter_username}}</a>
+            </ng-container>
+            <ng-template #noTwitter>No twitter handle provided</ng-template>
+        </h5>
+        <a class="text-blue-400 hover:underline mb-6" href="https://github.com/{{githubUsername}}" target="_blank">https://github.com/{{githubUsername}}</a>
+    </div>
+</div>

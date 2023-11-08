@@ -1,5 +1,38 @@
-<div class="grid h-screen place-items-center">
-  <div class="font-bold text-3xl">
-    Fyle Internship Challenge
+<div class="">
+  <div class="flex items-center h-screen justify-center" *ngIf="!usernameEntered">
+    <input type="text" class="form-input px-4 py-3 mx-4 border" [(ngModel)]="token" placeholder="Enter access token.." />
+    <input type="email" class="form-input px-4 py-3 border" [(ngModel)]="githubUsername" placeholder="Enter GitHub username.." />
+    <button class="ml-4 px-4 py-2 bg-blue-400 hover:bg-blue-700 text-white font-bold rounded-full shadow-md {{ disableButton ? 'pointer-events-none opacity-50' : '' }}"
+    (click)="fetchRepos()"
+    [disabled]="disableButton"
+    >
+      Get Repositories
+    </button>
+  </div>
+
+
+  <div class="relative" *ngIf="usernameEntered">
+    <button class="absolute top-4 right-4 px-4 py-2 bg-blue-400 hover:bg-blue-700 text-white font-bold rounded-full shadow-md {{ disableButton ? 'pointer-events-none opacity-50' : '' }}"
+    (click)="searchOtherUser()"
+    [disabled]="disableButton"
+    >
+      Search other user
+    </button>  
+    <div class="flex flex-col mt-0">
+      <app-avatar
+        class="mb-6"
+        [githubUsername]="githubUsername"
+        [usernameEntered]="usernameEntered"
+        [token]="token"
+      />
+    </div>
+    
+
+    <div class="">
+      <app-containerbox
+        [githubUsername]="githubUsername"
+        [token]="token"
+      />
+    </div>
   </div>
 </div>
