@@ -14,7 +14,7 @@ __Note__: Unauthenticated users can only make a few requests, and it's possible 
 
 ## Deployed Site
 
-You can access the deployed site [here](http://myfirstbucketasvrs.s3-website.ap-south-1.amazonaws.com/).
+You can access the deployed site [here](http://githubpublicrepo.s3-website.ap-south-1.amazonaws.com/).
 
 ## How to Create a GitHub Access Token
 
@@ -43,4 +43,4 @@ Run `ng serve` for a development server. Navigate to http://localhost:4200/. The
 
 ## Further Help
 
-Visit the [Angular Documentation](https://angular.io/guide/styleguide) to learn more. Styling should be strictly done with [Tailwind CSS](https://tailwindcss.com/docs/installation).
+Visit the [Angular Documentation](https://angular.io/guide/styleguide) to learn more.
